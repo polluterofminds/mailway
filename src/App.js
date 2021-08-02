@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Blog from "./components/Blog";
+import Feature from "./components/Feature";
+import FeatureGrid from "./components/FeatureGrid";
+import FinalCTA from "./components/FinalCTA";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Testimonial from "./components/Testimonial";
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
+export default function Example() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="bg-white">
+        <div className="relative overflow-hidden">
+          <Navbar />
+          <main>
+            <Hero />
+            {/* Feature section with screenshot */}
+            <Feature />
+
+            {/* Feature section with grid */}
+            <FeatureGrid />
+
+            {/* Testimonial section */}
+            <Testimonial />
+
+            {/* Blog section */}
+            {/* <Blog /> */}
+
+            {/* CTA Section */}
+            {/* <FinalCTA /> */}
+          </main>
+          <Footer />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
