@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "CI=false && netlify-lambda build backend && craco build",
+    "build": "CI=false && craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
