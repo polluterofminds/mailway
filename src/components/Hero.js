@@ -45,7 +45,7 @@ const Hero = () => {
                 Mailway solves this.
               </p>
               <div className="mt-10 sm:mt-12">
-                <form action="https://mailway-app.netlify.app/api/collect" method="post" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                <form action="https://app.getmailway.com/api/collect/7TaoyT" method="post" className="sm:max-w-xl sm:mx-auto lg:mx-0">
                   <div className="sm:flex">
                     <div className="min-w-0 flex-1">
                       <label htmlFor="email" className="sr-only">
@@ -54,6 +54,7 @@ const Hero = () => {
                       <input
                         id="email"
                         type="email"
+                        name="email"
                         placeholder="Enter your email"
                         className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
                       />
@@ -87,10 +88,10 @@ const Hero = () => {
 {`
 <form 
   method="post" 
-  action="https://api.getmailway.com/{siteId}"
+  action="https://app.getmailway.com/api/collect/{siteId}"
 >
   <label>Email</label>
-  <input type="email" placeholder="Your email..." required />
+  <input name="email" type="email" placeholder="Your email..." required />
   <button type="submit">Subscribe</button>
 </form>
 
